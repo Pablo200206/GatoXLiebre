@@ -1,0 +1,18 @@
+.header{
+    background-color: aqua;
+}
+
+.list{
+    list-style: none;
+    min-height: 100%;
+}
+
+li{
+    border-right: 1px solid white;
+    min-height: 100%;
+    padding: 1vh;
+}
+
+li:hover{
+    background-color: gray;
+}
