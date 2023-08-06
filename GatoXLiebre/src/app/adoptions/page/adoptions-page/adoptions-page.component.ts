@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PetInfo } from 'src/app/entities/receive/pet-info';
 import { AdoptionsModule } from '../../adoptions.module';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-adoptions-page',
   templateUrl: './adoptions-page.component.html',
   styleUrls: ['./adoptions-page.component.css']
 })
-export class AdoptionsPageComponent {
+export class AdoptionsPageComponent implements OnInit {
     nombre: string = "adopciones";
-    searchValues: PetInfo;
+    searchValues: any;
+    id: number;
     list: PetInfo[] = [
         
     {
@@ -56,18 +58,24 @@ export class AdoptionsPageComponent {
     }
 
     
-
-
-
-
     ];
     
-    setValues(values: PetInfo) {
-        this.searchValues = values;
-        this.search()
+    constructor(private route: ActivatedRoute) {
+        
     }
 
+    ngOnInit() {
+        
+    }
+    setValues(values: any) {
+        this.searchValues = values;
+        this.search()
+        let queryString = new URLSearchParams(this.searchValues).toString
+    }
+    
     search() {
-        params.get('id')
+        this.route.queryParams.subscribe(params => {
+            
+        })
     }
 }

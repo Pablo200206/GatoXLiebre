@@ -21,7 +21,7 @@ export class SearchComponent {
     genero: new FormControl('')
   })
     
-  @Output() formEvent = new EventEmitter<PetInfo>();
+  @Output() formEvent = new EventEmitter<any>();
   
   
   onSubmit() {
