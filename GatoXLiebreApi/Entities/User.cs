@@ -12,5 +12,7 @@ namespace GatoXLiebreApi.Entities
         public byte[] PasswordHash { get; set; }
 
         public byte[] PasswordSalt { get; set; }
+
+        public List<Pet> Pets { get; set; }
     }
 }

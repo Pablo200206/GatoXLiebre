@@ -269,3 +269,5 @@ C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\Mono.TextT
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\obj\Debug\net6.0\GatoXLiebreApi.RazorAssemblyInfo.cache
+C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\obj\Debug\net6.0\GatoXLiebreApi.RazorAssemblyInfo.cs

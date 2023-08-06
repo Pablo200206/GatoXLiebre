@@ -66,6 +66,8 @@ namespace GatoXLiebreApi.Controllers
             }
 
             string token = CreateToken(user);
+
+            return token;
         }
 
         private string CreateToken(User user)
