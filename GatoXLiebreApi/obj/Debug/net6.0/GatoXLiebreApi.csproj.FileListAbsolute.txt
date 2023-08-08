@@ -271,3 +271,5 @@ C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\System.Tex
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\obj\Debug\net6.0\GatoXLiebreApi.RazorAssemblyInfo.cache
 C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\obj\Debug\net6.0\GatoXLiebreApi.RazorAssemblyInfo.cs
+C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Pablo\Desktop\GatoXLiebreDef\GatoXLiebreApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

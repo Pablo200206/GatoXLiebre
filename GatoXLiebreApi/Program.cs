@@ -43,7 +43,7 @@ builder.Services.AddAuthentication(
 
     );
 
-    
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers();
 
 
