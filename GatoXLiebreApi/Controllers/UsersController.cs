@@ -7,155 +7,66 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GatoXLiebreApi;
 using GatoXLiebreApi.Entities;
+using AutoMapper;
+using GatoXLiebreApi.Dto;
 
 namespace GatoXLiebreApi.Controllers
 {
-    public class UsersController : Controller
+    [ApiController]
+    [Route("api/users")]
+    public class UsersController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public UsersController(AppDbContext context)
+        public UsersController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        // GET: Users
-        public async Task<IActionResult> Index()
+        [HttpGet("getAll/{page}")]
+        public async Task<ActionResult<List<UserDisplay>>> getUsers([FromRoute] int pageNumber)
         {
-              return View(await _context.Users.ToListAsync());
+           var users = await _context.Users.Select( x=> new UserDisplay
+            {
+                Id = x.Id,
+                Name = x.Name,
+            }).Skip((pageNumber-1)*10).Take(10).
+            ToListAsync();
+
+            return Ok(users);
         }
 
-        // GET: Users/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpGet("get/{id}")]
+        public async Task<ActionResult<UserDisplay>> getUser([FromRoute] int id)
         {
-            if (id == null || _context.Users == null)
-            {
-                return NotFound();
-            }
+            var user = await _context.Users.Select(x=>
+          new UserDisplay  {
+                Name = x.Name,
+                Id = x.Id
+            }).SingleOrDefaultAsync( x => x.Id == id );
 
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
+            if (user == null) { return NotFound(); }
 
-            return View(user);
+            return Ok(user);
         }
 
-        // GET: Users/Create
-        public IActionResult Create()
+        [HttpGet("getPets/{id}")]
+        public async Task<ActionResult<PetSenderDto>> getPetsFromUser([FromRoute] int id)
         {
-            return View();
+            var pets = await _context.Pets.Select( x=> new PetSenderDto
+            {
+                Name = x.Name,
+                Age = x.Age,
+                Size = x.Size,
+                Type = x.Type,
+                UserId = x.UserId
+
+            }).Where(x=> x.UserId == id).ToListAsync();
+
+            return Ok(pets);
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,SurName,Email,PasswordHash,PasswordSalt")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(user);
-        }
-
-        // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Users == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return View(user);
-        }
-
-        // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,SurName,Email,PasswordHash,PasswordSalt")] User user)
-        {
-            if (id != user.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(user);
-        }
-
-        // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Users == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
-        }
-
-        // POST: Users/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Users == null)
-            {
-                return Problem("Entity set 'AppDbContext.Users'  is null.");
-            }
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool UserExists(int id)
-        {
-          return _context.Users.Any(e => e.Id == id);
-        }
     }
 }

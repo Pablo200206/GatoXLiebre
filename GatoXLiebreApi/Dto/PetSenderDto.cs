@@ -6,5 +6,7 @@
         public string Age;
         public string Size;
         public string Type;
+
+        public int UserId { get;  set; }
     }
 }
