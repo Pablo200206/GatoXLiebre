@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj": {}
+    "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj": {
+    "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
+        "projectUniqueName": "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
         "projectName": "GatoXLiebreApi",
-        "projectPath": "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
+        "projectPath": "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
         "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\obj\\",
+        "outputPath": "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",

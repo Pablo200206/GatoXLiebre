@@ -1,3 +1,19 @@
-<app-navbar [nombre]="nombre"></app-navbar>
-<app-pet-card [petList]="list"></app-pet-card>
-<app-search (formEvent)="setValues($event)"></app-search>
+<app-navbar></app-navbar>
+
+
+<section class="principal">
+    <section class="pet-container">
+        <ng-container *ngFor="let item of animales" class="pet-container">
+    
+            <app-pet-card [pet]="item"></app-pet-card>
+    
+        </ng-container>
+    
+    </section>
+    
+    
+    
+    <div class="search-container">
+        <app-search></app-search>
+    </div>
+</section>

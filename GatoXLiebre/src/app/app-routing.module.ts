@@ -4,7 +4,7 @@ import { AdoptionsPageComponent } from './adoptions/page/adoptions-page/adoption
 
 const routes: Routes = [{
   component: AdoptionsPageComponent,
-  path: 'adoptions:/id'
+  path: 'adoptions'
 }];
 
 @NgModule({

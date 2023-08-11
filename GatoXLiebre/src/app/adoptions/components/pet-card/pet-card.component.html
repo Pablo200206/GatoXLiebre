@@ -1,18 +1,10 @@
-<section class="container pet-container">
-    <div class="row">
-        <article class="col-sm-3 m-3 pet-card" *ngFor="let item of petList; let i = index">
-            <div class="img-container">
-                <img src="" alt="">
-            </div>
-
-            <div class="info-container">
-                <h3>{{item.nombre}}</h3>
-                <p>{{item.raza}}, {{item.edad}}, {{item.size}}, {{item.sexo}}</p>
-            </div>
-
-            <div class="button-cotainer">
-                <button class="btn">VER MÁS</button>
-            </div>
-        </article>
-    </div>
-</section>
+<mat-card class="pet-card">
+    <mat-card-header>
+        <mat-card-title>{{pet.nombre}}</mat-card-title>
+    </mat-card-header>
+    <img class="pet-img" mat-card-image src="https://estag.fimagenes.com/img/2/3/K/D/5/3KD5_900.jpg">
+    <mat-card-content>
+        <mat-card-subtitle class="text"><span>{{pet.animal}}</span>, <span>{{pet.provincia}}</span>, <span>{{pet.edad}}</span>, <span>{{pet.genero}}</span></mat-card-subtitle>
+    </mat-card-content>
+    <button class="card-button" mat-raised-button color="warn">Ver más</button>
+</mat-card>

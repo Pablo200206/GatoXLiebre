@@ -2,80 +2,75 @@ import { Component, OnInit } from '@angular/core';
 import { PetInfo } from 'src/app/entities/receive/pet-info';
 import { AdoptionsModule } from '../../adoptions.module';
 import { ActivatedRoute } from '@angular/router';
+import { Animal } from 'src/app/entities/receive/animal';
+import { Age } from 'src/app/entities/receive/age';
+import { Genero } from 'src/app/entities/receive/genero';
+import { Provincia } from 'src/app/entities/receive/provincia';
 
 @Component({
   selector: 'app-adoptions-page',
   templateUrl: './adoptions-page.component.html',
   styleUrls: ['./adoptions-page.component.css']
 })
-export class AdoptionsPageComponent implements OnInit {
-    nombre: string = "adopciones";
-    searchValues: any;
-    id: number;
-    list: PetInfo[] = [
-        
-    {
-        nombre: 'Fido',
-        raza: 'Labrador',
-        edad: 4,
-        sexo: 'Masculino',
-        size: 'Grande'
-    },
-    {
-        nombre: 'Fluffy',
-        raza: 'Persa',
-        edad: 3,
-        sexo: 'Femenino',
-        size: 'Pequeño'
-    },
-    {
-        nombre: 'Max',
-        raza: 'Golden Retriever',
-        edad: 7,
-        sexo: 'Masculino',
-        size: 'Grande'
-    },
-    {
-        nombre: 'Misty',
-        raza: 'Siamesa',
-        edad: 2,
-        sexo: 'Femenino',
-        size: 'Pequeño'
-    },
-    {
-        nombre: 'Rex',
-        raza: 'Pastor Alemán',
-        edad: 6,
-        sexo: 'Masculino',
-        size: 'Grande'
-    },
-    {
-        nombre: 'Bella',
-        raza: 'Poodle',
-        edad: 5,
-        sexo: 'Femenino',
-        size: 'Mediano'
-    }
+export class AdoptionsPageComponent  {
+    animales: PetInfo[] = [
+  
+  {
+    nombre: "Coco",
+    animal: Animal.Gato,
+    edad: Age.Joven,
+    provincia: Provincia.Valencia,
+    genero: Genero.Masculino,
+  },
+  {
+    nombre: "Bella",
+    animal: Animal.Perro,
+    edad: Age.Cachorro,
+    provincia: Provincia.Madrid,
+    genero: Genero.Femenino,
+  },
+  {
+    nombre: "Leo",
+    animal: Animal.Gato,
+    edad: Age.Adulto,
+    provincia: Provincia.Malaga,
+    genero: Genero.Masculino,
+  },
+  {
+    nombre: "Nina",
+    animal: Animal.Roedor,
+    edad: Age.Adulto,
+    provincia: Provincia.Barcelona,
+    genero: Genero.Femenino,
+  },
+  {
+    nombre: "Rocky",
+    animal: Animal.Perro,
+    edad: Age.Adulto,
+    provincia: Provincia.Valencia,
+    genero: Genero.Masculino,
+  },
+  {
+    nombre: "Lola",
+    animal: Animal.Gato,
+    edad: Age.Joven,
+    provincia: Provincia.Madrid,
+    genero: Genero.Femenino,
+  },
+  {
+    nombre: "Kiwi",
+    animal: Animal.Perro,
+    edad: Age.Cachorro,
+    provincia: Provincia.Barcelona,
+    genero: Genero.Femenino,
+  },
+  {
+    nombre: "Thor",
+    animal: Animal.Perro,
+    edad: Age.Joven,
+    provincia: Provincia.Malaga,
+    genero: Genero.Masculino,
+  },
+];
 
-    
-    ];
-    
-    constructor(private route: ActivatedRoute) {
-        
-    }
-
-    ngOnInit() {
-        
-    }
-    setValues(values: any) {
-        this.searchValues = values;
-        this.search()
-        let queryString = new URLSearchParams(this.searchValues).toString
-    }
-    
-    search() {
-        this.route.queryParams.subscribe(params => {
-            
-        })
-    }
 }

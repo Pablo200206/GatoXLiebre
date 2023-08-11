@@ -1,11 +1,13 @@
-<header class="header">
-<div class="row">
-        <h1 class="col-6">{{nombre}}</h1>
-        <ul class="list col-6 row">
-           <li class="col-sm-3"> Adopciones</li>
-            <li class="col-sm-3">Animales de Asistencia</li>
-            <li class="col-sm-3">Habitos</li>
-        <li class="col-sm-3">Colabora</li>
-        </ul>
+<mat-toolbar color="primary">
+<div>
+    <img src="../../../../Gato lunar.jpg">
+    <span>GatoXLiebre</span>
 </div>
-</header>
+<mat-toolbar-row>
+   <nav class="nav" mat-tab-nav-bar [backgroundColor]="'primary'">
+    <a mat-tab-link>Adopciones</a>
+    <a mat-tab-link>Donaciones</a>
+    <a mat-tab-link>Contacto</a>
+   </nav>
+</mat-toolbar-row>
+</mat-toolbar>

@@ -1,7 +1,12 @@
+import { Age } from "./age";
+import { Animal } from "./animal";
+import { Genero } from "./genero";
+import { Provincia } from "./provincia";
+
 export interface PetInfo {
     nombre: string,
-    raza: string,
-    edad: number,
-    sexo: string,
-    size: string
+    animal: Animal,
+    edad: Age,
+    provincia: Provincia,
+    genero: Genero
 }

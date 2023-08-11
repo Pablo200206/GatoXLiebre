@@ -1,17 +1,30 @@
-<article>
-    <h2>Buscador</h2>
-    <form>
-        <label>Animal</label>
-        <input type="select" formControlName="animal">
-        <label>Edad</label>
-        <input type="select">
-        <label>Tamaño</label>
-        <input type="select">
-        <label>Genero</label>´
-        <input type="select">
-        <div class="button-cotainer">
-            <button class="btn">Buscar</button>
-        </div>
+<section class="search">
+    <h2>Busqueda</h2>
+    <hr>
+    <h4>Provincia</h4>
 
-    </form>
-</article>
+    <mat-form-field>
+        <mat-label>Selecciona Provincia</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let value of provincias" [value]="value">{{Type2Label[value]}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <h4>Animal</h4>
+
+    <mat-form-field>
+        <mat-label>Selecciona Animal</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let value of animales" [value]="value">{{animal2Label[value]}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <h4>Edad</h4>
+    
+    <mat-form-field>
+        <mat-label>Selecciona Edad</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let value of ages" [value]="value">{{age2Label[value]}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</section>
