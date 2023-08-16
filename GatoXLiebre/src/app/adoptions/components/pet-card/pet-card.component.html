@@ -1,10 +1,8 @@
-<mat-card class="pet-card">
-    <mat-card-header>
-        <mat-card-title>{{pet.nombre}}</mat-card-title>
-    </mat-card-header>
-    <img class="pet-img" mat-card-image src="https://estag.fimagenes.com/img/2/3/K/D/5/3KD5_900.jpg">
-    <mat-card-content>
-        <mat-card-subtitle class="text"><span>{{pet.animal}}</span>, <span>{{pet.provincia}}</span>, <span>{{pet.edad}}</span>, <span>{{pet.genero}}</span></mat-card-subtitle>
-    </mat-card-content>
-    <button class="card-button" mat-raised-button color="warn">Ver más</button>
-</mat-card>
+<article class="card">
+    <div class="card-header">
+        <h1 class="card-title">{{pet.nombre}}</h1>
+    </div>
+    <img class="card-img" src="https://estag.fimagenes.com/img/2/3/K/D/5/3KD5_900.jpg" alt="">
+    <p class="text">{{pet.animal}}, {{pet.genero}}, {{pet.edad}}</p>
+    <a class="btn" href="">Ver más</a>
+</article>

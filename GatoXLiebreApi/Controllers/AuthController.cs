@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using AutoMapper;
 
 namespace GatoXLiebreApi.Controllers
 {
@@ -21,16 +22,21 @@ namespace GatoXLiebreApi.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IMapper _mapper;
 
-        public AuthController(AppDbContext context, IConfiguration configuration)
+        public AuthController(AppDbContext context, IConfiguration configuration, IMapper mapper)
         {
             _context = context;
            _configuration = configuration;
+            _mapper = mapper;
         }
 
         [HttpPost("register")]
         public async Task<ActionResult<User>> register(UserCreationDto entity)
         {
+
+            Console.WriteLine(entity);
+
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == entity.Email);
 
             if(user != null) {
@@ -38,10 +44,10 @@ namespace GatoXLiebreApi.Controllers
                     };
 
             CreatePasswordHash(entity.Password, out byte[] hash, out byte[] salt);
-
+            user = _ma
+            user.SurName = "placeholder";
             user.Email = entity.Email;
             user.Name = entity.Name;
-            user.SurName = entity.Surname;
             user.PasswordHash = hash;
             user.PasswordSalt = salt;
             await _context.Users.AddAsync(user);

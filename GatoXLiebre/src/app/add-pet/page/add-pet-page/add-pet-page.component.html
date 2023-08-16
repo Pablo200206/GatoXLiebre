@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper">
+    <form class="form" [formGroup]="animal">
+    
+    
+        <div class="left">
+            <h2>Sube la mascota</h2>
+    
+            <label>Provincia</label>
+            <select formControlName="provincia">
+                <option>Example</option>
+            </select>
+    
+            <label for="">Animal</label>
+            <select formControlName="animal" id="">
+                <option>Example</option>
+            </select>
+            <label for="">Edad</label>
+            <select formControlName="edad">
+                <option>Example</option>
+            </select>
+
+            <div class="add-picture">
+            
+                <h2>Sube una foto de la mascota</h2>
+                <input type="file" name="" id="">
+            
+            
+            </div>
+        </div>
+    
+        <div class="right">
+            <h2>Añade una breve descripción</h2>
+            <textarea formControlName="descripcion"></textarea>
+            <div class="button">
+                <a (onClick)="clickHandler()">Enviar</a>
+            </div>
+        </div>
+    
+    
+    
+    
+    </form>
+    
+   
+</div>

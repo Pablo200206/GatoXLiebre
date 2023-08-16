@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using GatoXLiebreApi.Enum;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GatoXLiebreApi.Entities
 {
@@ -17,11 +18,11 @@ namespace GatoXLiebreApi.Entities
         public string Name { get; set; }
         public string Description { get; set; }
 
-      
-        public string Type { get; set; }
+        public Genero Genero { get; set; }
 
-        public string Size { get; set; }
+        public Age Age { get; set; }
 
-        public string Age { get; set; }
+        public Provincia Provincia { get; set; }
+
     }
 }

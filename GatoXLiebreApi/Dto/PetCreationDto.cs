@@ -1,17 +1,18 @@
 ﻿using GatoXLiebreApi.Entities;
-
+using GatoXLiebreApi.Enum;
 namespace GatoXLiebreApi.Dto
 {
     public class PetCreationDto
     {
-        public string Name { get; set; }
+        public string Nombre { get; set; }
         public string Description { get; set; }
+    
+        public Animal Animal { get; set; }
 
+        public Age Age { get; set; }
 
-        public string Type { get; set; }
+        public Provincia Provincia { get; set; }
 
-        public string Size { get; set; }
-
-        public string Age { get; set; }
+        public Genero Genero { get; set; }
     }
 }

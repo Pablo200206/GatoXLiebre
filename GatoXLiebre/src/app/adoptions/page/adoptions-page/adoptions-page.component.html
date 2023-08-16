@@ -1,19 +1,22 @@
-<app-navbar></app-navbar>
-
-
-<section class="principal">
-    <section class="pet-container">
-        <ng-container *ngFor="let item of animales" class="pet-container">
-    
-            <app-pet-card [pet]="item"></app-pet-card>
-    
-        </ng-container>
-    
-    </section>
+    <app-navbar></app-navbar>
     
     
     
-    <div class="search-container">
+    
+    
+    <section class="wrapper">
         <app-search></app-search>
-    </div>
-</section>
+
+    </section>    
+
+
+
+<div class="wrapper">
+        <section class="pet-container">
+            <ng-container *ngFor="let item of animales" class="pet-container">
+        
+                <app-pet-card class="pet" [pet]="item"></app-pet-card>
+        
+            </ng-container>
+        </section>  
+</div>

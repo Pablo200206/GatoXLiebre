@@ -1,14 +1,10 @@
 import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdoptionsPageComponent } from './adoptions/page/adoptions-page/adoptions-page.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSelectModule } from '@angular/material/select';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

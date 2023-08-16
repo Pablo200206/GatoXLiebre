@@ -35,7 +35,7 @@ namespace GatoXLiebreApi.Migrations
                 oldType: "nvarchar(max)");
 
             migrationBuilder.AlterColumn<string>(
-                name: "Name",
+                name: "Nombre",
                 table: "Users",
                 type: "nvarchar(max)",
                 nullable: true,
@@ -117,7 +117,7 @@ namespace GatoXLiebreApi.Migrations
                 oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Name",
+                name: "Nombre",
                 table: "Users",
                 type: "nvarchar(max)",
                 nullable: false,

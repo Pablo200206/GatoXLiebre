@@ -1,19 +1,27 @@
-.pet-container{
+.wrapper{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 2rem;
+    width: 100%;
 }
 
-.principal{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
+.pet-container{
+    margin: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .8rem;
 }
 
-.search-container{
-    display: flex;
-    justify-items: center;
+
+@media screen and (max-width: 992px) {
+
+    .pet-container {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media screen and (max-width: 552px) {
+
+    .pet-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

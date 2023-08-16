@@ -36,8 +36,12 @@ namespace GatoXLiebreApi.Controllers
             {
                 Name = x.Name,
                 Age = x.Age,
-                Size = x.Size,
-                Type = x.Type
+                Genero = x.Genero,
+                Provincia = x.Provincia,
+                Id = x.Id,
+                UserId = x.UserId
+
+             
             }).Skip((page - 1) * 10).Take(10).ToListAsync();
 
             if (pets == null)
@@ -71,7 +75,6 @@ namespace GatoXLiebreApi.Controllers
             {
                 Name = x.Name,
                 Age = x.Age,
-                Size = x.Size,
                 UserId = x.UserId,
                 UserName = x.User.Name,
                 Id = x.Id

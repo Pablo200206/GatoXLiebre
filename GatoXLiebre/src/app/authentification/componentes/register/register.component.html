@@ -1,0 +1,23 @@
+<form class="form" [formGroup]="registerForm" (submit)="onSubmit()">
+    <div class="left">
+        <label for="">E-Mail</label>
+        <input type="email" formControlName="email">
+    
+        <label>Nombre</label>
+        <input type="text" formControlName="name">
+    </div>
+
+    <div class="right" >
+        <label>Contraseña</label>
+    <input type="password" formControlName="password">
+
+    <label>Confirmar Contraseña</label>
+
+
+    <input type="password" formControlName="confirmPassword">
+
+    
+    <input type="submit">
+    </div>
+
+</form>

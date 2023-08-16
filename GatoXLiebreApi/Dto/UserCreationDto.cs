@@ -13,6 +13,5 @@ namespace GatoXLiebreApi.Dto
         [MinLength(2)]
         public string Name { get; set; }
 
-        public string Surname { get; set; }
     }
 }

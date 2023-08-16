@@ -59,8 +59,7 @@ namespace GatoXLiebreApi.Controllers
             {
                 Name = x.Name,
                 Age = x.Age,
-                Size = x.Size,
-                Type = x.Type,
+                Genero = x.Genero,
                 UserId = x.UserId
 
             }).Where(x=> x.UserId == id).ToListAsync();

@@ -1,30 +1,19 @@
-<section class="search">
-    <h2>Busqueda</h2>
-    <hr>
-    <h4>Provincia</h4>
 
-    <mat-form-field>
-        <mat-label>Selecciona Provincia</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let value of provincias" [value]="value">{{Type2Label[value]}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-    
-    <h4>Animal</h4>
-
-    <mat-form-field>
-        <mat-label>Selecciona Animal</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let value of animales" [value]="value">{{animal2Label[value]}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <h4>Edad</h4>
-    
-    <mat-form-field>
-        <mat-label>Selecciona Edad</mat-label>
-        <mat-select>
-            <mat-option *ngFor="let value of ages" [value]="value">{{age2Label[value]}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-</section>
+    <form class="search">
+        <div class="field"><h4>Provincia</h4>
+            <select name="Provincia" id="">
+                <option *ngFor="let provincia of provincias" value="provincia">{{Type2Label[provincia]}}</option>
+            </select></div>
+        <div class="field">
+            <h4>Animal</h4>
+            <select name="Animal" id="">
+                <option *ngFor="let animal of animales" value="provincia">{{animal2Label[animal]}}</option>
+            </select>
+        </div>
+        <div class="field">
+            <h4>Edad</h4>
+            <select name="Edad" id="">
+                <option *ngFor="let edad of ages" value="age">{{age2Label[edad]}}</option>
+            </select>
+        </div>
+    </form>

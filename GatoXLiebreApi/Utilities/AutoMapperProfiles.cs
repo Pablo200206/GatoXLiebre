@@ -8,6 +8,7 @@ namespace GatoXLiebreApi.Utilities
     {
         public AutoMapperProfiles() {
             CreateMap<PetCreationDto, Pet>();
+            CreateMap<UserCreationDto, User>();
         }
     }
 }

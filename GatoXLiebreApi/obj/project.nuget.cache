@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dU2wtW1pLywhJ+2LdUd4OWOIa90z/ybhzvH7CLh2xRHgN/JUuODJnlkNBWdvxn5DZ0HsZbZjUf70fm1nwR9vsA==",
+  "dgSpecHash": "7tkepdmzkibsT/4OAHlXRuXIVFIm2ImNO/sEoHaiYRgplc5aP1BHJUE757HFBppB+rt83mEh2j/O9m1rEU9gFQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
+  "projectFilePath": "C:\\Users\\Pablo\\Desktop\\GatoXLiebreDef\\GatoXLiebreApi\\GatoXLiebreApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pablo\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Pablo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

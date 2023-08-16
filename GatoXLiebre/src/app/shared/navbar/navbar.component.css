@@ -1,7 +1,26 @@
-.navbar{
+.header{
+    display: flex;
+    width: 100%;
     background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav{
-    width: 100%;
+.menu{
+  margin-right: 1rem;
+}
+
+
+
+li > a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    background-color: yellow;
+    padding: 0.8em;
+    color: black;
+}
+
+li+li {
+    margin-top: 0;
+    margin-left: 1rem;
 }

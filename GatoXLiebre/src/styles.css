@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+body{
     margin: 0;
+}
+
+::root{
+    box-sizing: border-box;
+    font-size: calc(1em + 1vw);
+}
+
+body, *, ::after, ::before{
+    box-sizing: inherit;
+    font-size: inherit;
+}
+
+body *+* {
+    margin-top: 1rem;
 }

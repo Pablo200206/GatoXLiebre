@@ -45,7 +45,7 @@ builder.Services.AddAuthentication(
 
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers();
-
+builder.Services.AddCors();
 
 
 var app = builder.Build();
@@ -55,6 +55,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+app.UseCors(options=>
+{
+    options.AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
+}    
+    );
 
 app.UseHttpsRedirection();
 
